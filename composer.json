@@ -1,0 +1,15 @@
+{
+    "name": "cod3x/logsystem",
+    "description": "PHP log system to store user interaction",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Durand",
+            "email": "contact@victordurand.fr",
+            "homepage": "https://victordurand.fr",
+            "role": "Developer"
+        }
+    ],
+     
+}
