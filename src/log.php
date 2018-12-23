@@ -1,5 +1,5 @@
 <?php
-namespace LogSystem;
+
 public class LogSystem {
   private $date = date('Y-m-d');
   private $root = realpath($_SERVER["DOCUMENT_ROOT"]);
@@ -17,7 +17,5 @@ public class LogSystem {
       print "Could not lock $filename!\n";
     }
   }
-
-
 }
 ?>
