@@ -1,6 +1,6 @@
 <?php
 namespace LogSystem;
-class LogSystem {
+public class LogSystem {
   private $date = date('Y-m-d');
   private $root = realpath($_SERVER["DOCUMENT_ROOT"]);
   private $logpath = $root.'/panel/admin/log/';
