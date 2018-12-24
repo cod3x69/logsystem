@@ -1,19 +1,19 @@
 {
-    "name": "cod3x/logsystem",
-    "description": "A PHP class to create a log system to have a look on user interaction",
-    "type": "library",
-    "require": {
-        "php": ">=5.3.0"
-    },
-    "authors": [
-        {
-            "name": "Victor Durand",
-            "email": "contact@victordurand.fr"
-        }
-    ],
-    "autoload": {
-    "psr-0": {
-        "LogSystem": "src/"
+  "name": "cod3x/logsystem",
+  "description": "A PHP class to create a log system to have a look on user interaction",
+  "type": "library",
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "authors": [
+    {
+      "name": "Victor Durand",
+      "email": "contact@victordurand.fr"
     }
-
+  ],
+  "autoload": {
+    "psr-0": {
+      "LogSystem": "src/"
+    }
+  }
 }
