@@ -7,13 +7,12 @@ class LogSystem {
     $logpath= $root.'/panel/admin/log/';
     $filename = 'log-'.$date.'.log';
     $heure = date('H:i:s');
-    print($logpath);
     $file = fopen($logpath.$filename, "a+");
     if (flock($file, LOCK_EX)) {
       fwrite($file,"\n".$heure." : ".$message);
       flock($file, LOCK_UN);
     } else {
-      print "Could not lock $filename!\n";
+      //print "Could not lock $filename!\n";
     }
   }
 
