@@ -1,14 +1,19 @@
 {
     "name": "cod3x/logsystem",
-    "description": "PHP log system to store user interaction",
+    "description": "A PHP class to create a log system to have a look on user interaction",
     "type": "library",
-    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    },
     "authors": [
         {
             "name": "Victor Durand",
-            "email": "contact@victordurand.fr",
-            "homepage": "https://victordurand.fr",
-            "role": "Developer"
+            "email": "contact@victordurand.fr"
         }
-    ]
+    ],
+    "autoload": {
+    "psr-0": {
+        "LogSystem": "src/"
+    }
+
 }

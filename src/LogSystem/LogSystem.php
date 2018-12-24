@@ -1,7 +1,6 @@
 <?php
-
+namespace LogSystem;
 class LogSystem {
-
   public function write($message){
     $date = date('Y-m-d');
     $root= realpath($_SERVER["DOCUMENT_ROOT"]);
