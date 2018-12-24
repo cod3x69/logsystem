@@ -1,21 +1,35 @@
 <?php
 
-public class LogSystem {
-  private $date = date('Y-m-d');
-  private $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-  private $logpath = $root.'/panel/admin/log/';
-  private $filename = 'log-'.$date.'.log';
+class LogSystem {
 
   public function write($message){
-    $heure = date('H:i');
+    $date = date('Y-m-d');
+    $root= realpath($_SERVER["DOCUMENT_ROOT"]);
+    $logpath= $root.'/panel/admin/log/';
+    $filename = 'log-'.$date.'.log';
+    $heure = date('H:i:s');
+    print($logpath);
     $file = fopen($logpath.$filename, "a+");
     if (flock($file, LOCK_EX)) {
-      fwrite($file,$message);
-      flock($file, LOCK_UN); // unlock the file
+      fwrite($file,"\n".$heure." : ".$message);
+      flock($file, LOCK_UN);
     } else {
-      // flock() returned false, no lock obtained
       print "Could not lock $filename!\n";
     }
   }
+
+  public function remove($date){
+    $root= realpath($_SERVER["DOCUMENT_ROOT"]);
+    $logpath= $root.'/panel/admin/log/';
+    $filename = "log-".$date.".log";
+    $filepath = $logpath.$filename;
+    if (file_exists($logpath.$filename)){
+      unlink($filepath);
+    }
+    else {
+      print "It seems that the file you specified doesn't exist.";
+    }
+  }
+
 }
 ?>
