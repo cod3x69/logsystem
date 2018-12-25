@@ -9,7 +9,7 @@ class LogSystem {
     $heure = date('H:i:s');
     $file = fopen($logpath.$filename, "a+");
     if (flock($file, LOCK_EX)) {
-      fwrite($file,"\n".$heure." : ".$message);
+      fwrite($file,$heure." : ".$message."\n");
       flock($file, LOCK_UN);
     } else {
       //print "Could not lock $filename!\n";
